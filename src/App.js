@@ -12,6 +12,9 @@ const App = () => {
     console.log(data)
   }
 
+  useEffect(() => {
+    searchMovie('Batman');
+  },[]);
 
   return (
     <h1>App</h1>
