@@ -30,7 +30,7 @@ const App = () => {
           value={searchMovieName}
           onChange={(e) => setSearchMovieName(e.target.value)}
         />
-        {/* <img src={SearchIcon} alt="search" onClick={() => {}} /> */}
+        <img src={SearchIcon} alt="search" onClick={() => {}} />
       </div>
       {movies?.length > 0 ? (
         <section className="container">
