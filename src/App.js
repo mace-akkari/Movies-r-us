@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 
 import IndividualMovieCard from "./IndividualMovieCard";
 import SearchIcon from "./search.svg";
+import "./App.css";
 
 // api key --->  http://www.omdbapi.com/?i=tt3896198&apikey=6124488b
 
@@ -22,15 +23,19 @@ const App = () => {
   }, []);
 
   return (
-    <section>
+    <section className="app">
       <h1>Movies 'R' Us</h1>
-      <div className="searchbar">
+      <div className="search_bar">
         <input
           placeholder="Search Movies 'R' Us"
           value={searchMovieName}
-          onChange={(e) => setSearchMovieName(e.target.value)}
+          onChange={(event) => setSearchMovieName(event.target.value)}
         />
-        <img src={SearchIcon} alt="search" onClick={() => {}} />
+        <img
+          src={SearchIcon}
+          alt="search"
+          onClick={() => searchMovies(searchMovieName)}
+        />
       </div>
       {movies?.length > 0 ? (
         <section className="container">
@@ -39,7 +44,7 @@ const App = () => {
           ))}
         </section>
       ) : (
-        <div>
+        <div className="empty_search">
           <h2>No Movies Available</h2>
         </div>
       )}
