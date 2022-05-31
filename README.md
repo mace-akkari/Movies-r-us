@@ -1,6 +1,6 @@
-### 'Installation:'
+### `Installation:`
 to instal run -
-NPM INSTALL
+npm instal
 
 ### `npm start`
 
